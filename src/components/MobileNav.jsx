@@ -11,44 +11,44 @@ const MobileNav = () => {
   const menuRef = useRef(null);
   const crossIconRef = useRef(null);
 
-  useGSAP(() => {
-    let tl = gsap.timeline();
-    tl.pause();
+  // useGSAP(() => {
+  //   let tl = gsap.timeline();
+  //   tl.pause();
 
-    menuRef.current.addEventListener("click", () => {
-      setIsVisible(true);
-      tl.play(true);
-    });
+  //   menuRef.current.addEventListener("click", () => {
+  //     setIsVisible(true);
+  //     tl.play(true);
+  //   });
 
-    crossIconRef.current.addEventListener("click", () => {
-      tl.reversed();
-      setIsVisible(false);
-    });
+  //   crossIconRef.current.addEventListener("click", () => {
+  //     tl.reversed();
+  //     setIsVisible(false);
+  //   });
 
-    tl.from(
-      navRef.current.querySelectorAll(".animate-link"),
-      {
-        duration: 2.5,
-        stagger: 0.3,
-        delay: 0.2,
-        opacity: 0,
-        ease: "Expo.easeInOut",
-      },
-      "-=0.5"
-    );
-  }, [isVisible]);
+  //   tl.from(
+  //     navRef.current.querySelectorAll(".animate-link"),
+  //     {
+  //       duration: 2.5,
+  //       stagger: 0.3,
+  //       delay: 0.2,
+  //       opacity: 0,
+  //       ease: "Expo.easeInOut",
+  //     },
+  //     "-=0.5"
+  //   );
+  // }, [isVisible]);
 
   return (
     <>
       <div className="block lg:hidden">
-        <MenuIcon ref={menuRef} />
+        <MenuIcon ref={menuRef} onClick={() => setIsVisible(true)} />
         <nav
           ref={navRef}
           className={` fixed z-[99] top-0 left-0 w-full h-screen bg-white  ${
             isVisible ? "" : "hidden"
           }`}
         >
-          <CrossIcon ref={crossIconRef} />
+          <CrossIcon ref={crossIconRef} onClick={() => setIsVisible(false)} />
 
           <div className="logo mt-[60px] flex justify-center">
             <a href="#" className="animate-link">
