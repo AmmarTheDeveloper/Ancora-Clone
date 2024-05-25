@@ -17,9 +17,9 @@ function App() {
         <CursorAnimation />
         <Navbar />
         <Hero />
-        <Marquee />
-        <DynamicBackground />
       </div>
+      <Marquee />
+      <DynamicBackground />
     </>
   );
 }

@@ -61,8 +61,6 @@ const Hero = () => {
       btn.addEventListener("mouseenter", () => {
         gsap.to(document.querySelector(".cursor"), {
           scale: 2,
-          mixBlendMode: "difference",
-          background: "white",
         });
       });
 
@@ -76,8 +74,6 @@ const Hero = () => {
 
         gsap.to(document.querySelector(".cursor"), {
           scale: 1,
-          background: "black",
-          mixBlendMode: "normal",
         });
       });
     });
