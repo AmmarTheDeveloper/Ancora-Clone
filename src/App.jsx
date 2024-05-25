@@ -10,7 +10,8 @@ function App() {
     <>
       <div
         style={{
-          backgroundImage: "url(./public/images/bg.jpg)",
+          backgroundImage:
+            "url(http://trx-effects.ancorathemes.com/wp-content/uploads/2021/04/bg.jpg)",
           backgroundSize: "cover",
         }}
       >
