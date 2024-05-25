@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alata", sans-serif;
+}
+
+@font-face {
+  font-family: 'sofia pro';
+  src: url('../public/fonts/Sofia\ Pro\ Bold\ Az.otf');
+}
+
+html {
+  font-size: 17px;
+}
+
+.sofia {
+  font-family: "sofia pro", sans-serif;
+  background: transparent;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to top right, #100647 0%, #F62358 100%)
+}
+
+
+.link {
+  position: relative;
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #152035;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
+/* responsive */
+
+@media (max-width: 1279px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 479px) {
+  html {
+    font-size: 14px;
+    line-height: 154%
+  }
+}
