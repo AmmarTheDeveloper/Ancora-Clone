@@ -17,7 +17,9 @@ function App() {
       >
         <CursorAnimation />
         <Navbar />
-        <Hero />
+        <div className="max-w-[1800px] mx-auto">
+          <Hero />
+        </div>
       </div>
       <Marquee />
       <DynamicBackground />
